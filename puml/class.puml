@@ -1,0 +1,9 @@
+@startuml class
+interface IF
+
+class ImplA
+class ImplB
+
+IF <|.. ImplA
+IF <|.. ImplB
+@enduml

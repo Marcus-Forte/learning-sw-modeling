@@ -1,0 +1,20 @@
+{
+    "name": "SW Modeling",
+
+    "image": "structurizr/lite:latest",
+
+    "mounts": [
+        "source=${localWorkspaceFolder}/model,target=/usr/local/structurizr,type=bind,consistency=cached"
+    ],
+    "forwardPorts": [8080],
+
+    "postStartCommand": "nohup bash -c 'java -Dserver.port=8080 -jar /usr/local/structurizr-lite.war &'",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ciarant.vscode-structurizr",
+                "jebbs.plantuml"
+            ]
+        }
+    }
+}
